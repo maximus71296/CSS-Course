@@ -1,0 +1,38 @@
+body{
+    background-color: darkslategray;
+}
+
+.container{
+    border-radius: 10px;
+    width: 300px;
+    height: 500px;
+    margin: 50px auto;
+    box-shadow: 0 5px 10px black;
+    position: relative;
+    overflow: hidden;
+}
+
+.container img{
+    border-radius: 10px;
+    width: inherit;
+    height: inherit;
+    transition: all 0.5s;
+}
+
+.container .content{
+    position: absolute;
+    bottom: -45%;
+    background: linear-gradient(45deg,midnightblue,darkolivegreen);
+    font-family: "Comic Sans MS", sans-serif;
+    padding: 10px;
+    color: white;
+    transition: all 0.5s;
+}
+
+.container:hover .content{
+    bottom: 0%;
+}
+
+.container:hover img{
+    transform: translateY(-40%);
+}

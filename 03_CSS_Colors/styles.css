@@ -1,0 +1,16 @@
+body{
+    background-image: url("../img/image5.jpeg");
+
+}
+
+.container{
+    box-shadow: 0 0 10px black;
+    padding: 30px;
+    text-align: center;
+    font-family: "Comic Sans MS", sans-serif;
+    width: 800px;
+    margin: auto;
+    margin-top: 150px;
+    color: white;
+    background-color: rgba(255,255,0,0.3);
+}

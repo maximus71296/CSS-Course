@@ -1,0 +1,7 @@
+body{
+    background-color: yellow;
+    color: black;
+}
+#wide-screen h1{
+    display: block;
+}

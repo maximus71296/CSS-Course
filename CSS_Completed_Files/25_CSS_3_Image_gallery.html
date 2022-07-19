@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Image Gallery</title>
+    <style type="">
+    	body{
+    		font-family: Comic Sans MS, Sans-serif;
+    	}
+
+    	h1{
+    		text-align: center;
+    	}
+
+    	.image-div{
+    		border: 2px solid white;
+    		width: 300px;
+    		padding: 5px;
+    		border-radius: 15px;
+    		float: left;
+    		margin: 5px;
+    		text-align: center;
+    	}
+
+    	.image-div:hover{
+    		box-shadow: 0 0 15px black;
+    	}
+
+    	.zoom{
+    		width: 300px;
+    		height: 200px;
+    		border-radius: 15px;
+    		overflow: hidden;
+    	}
+
+    	.zoom img{
+    		max-width: 100%;
+    		max-height: 100%;
+    		transition: all 1s;
+    		cursor: pointer;
+    	}
+
+    	.zoom:hover img{
+    		transform: scale(1.2,1.2);
+    	}
+
+    	.zoom:hover{
+    		box-shadow: 0 0 15px black;
+    	}
+
+    	.desc{
+    		padding: 10px;
+    	}
+
+    </style>
+</head>
+<body>
+
+    <!-- CSS Image Gallery -->
+    <h1>Avengers</h1>
+    <div class="image-div">
+    	<div class="zoom">
+    		<img src="sup/img1.jpg">
+    	</div>
+    	<div class="desc">Captain America</div>
+    </div>
+
+    <div class="image-div">
+    	<div class="zoom">
+    		<img src="sup/img2.jpg">
+    	</div>
+    	<div class="desc">Iron Man</div>
+    </div>
+
+    <div class="image-div">
+    	<div class="zoom">
+    		<img src="sup/img3.jpg">
+    	</div>
+    	<div class="desc">Black Widow</div>
+    </div>
+
+    <div class="image-div">
+    	<div class="zoom">
+    		<img src="sup/img4.jpg">
+    	</div>
+    	<div class="desc">Hawk Eye</div>
+    </div>
+
+    <div class="image-div">
+    	<div class="zoom">
+    		<img src="sup/img5.jpg">
+    	</div>
+    	<div class="desc">Thor</div>
+    </div>
+
+    <div class="image-div">
+    	<div class="zoom">
+    		<img src="sup/img6.jpg">
+    	</div>
+    	<div class="desc">Hulk</div>
+    </div>
+
+    <div class="image-div">
+    	<div class="zoom">
+    		<img src="sup/img7.jpg">
+    	</div>
+    	<div class="desc">Black Panther</div>
+    </div>
+
+    <div class="image-div">
+    	<div class="zoom">
+    		<img src="sup/img8.jpg">
+    	</div>
+    	<div class="desc">Spider Man</div>
+    </div>
+
+    <div class="image-div">
+    	<div class="zoom">
+    		<img src="sup/img9.jpg">
+    	</div>
+    	<div class="desc">Winter Soldier</div>
+    </div>
+
+    <div class="image-div">
+    	<div class="zoom">
+    		<img src="sup/img10.jpg">
+    	</div>
+    	<div class="desc">Doctor Strange</div>
+    </div>
+
+    <div class="image-div">
+    	<div class="zoom">
+    		<img src="sup/img11.jpg">
+    	</div>
+    	<div class="desc">Scarlet Witch</div>
+    </div>
+
+    <div class="image-div">
+    	<div class="zoom">
+    		<img src="sup/img12.jpg">
+    	</div>
+    	<div class="desc">Falcon</div>
+    </div>
+
+</body>
+</html>

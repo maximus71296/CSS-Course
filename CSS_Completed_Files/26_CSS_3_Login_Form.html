@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS forms</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bootstrap/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bootstrap/css/animate.css">
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background: url(img/image4.jpeg) no-repeat scroll center;
+        }
+
+        .form-div{
+            width: 250px;
+            text-align: center;
+            margin: 150px auto;
+            background-color: rgba(0,0,0,0.5);
+            border-radius: 10px;
+            box-shadow: 0 0 15px #00aeef;
+        }
+
+        .form-div img{
+            width: 100px;
+            margin-top: -50px;
+        }
+
+        .form-div h2{
+            color: white;
+            margin-top: 10px;
+        }
+
+        input[type='text'], input[type='password']{
+            text-align: center;
+            border: none;
+            outline: none;
+            font-size: 18px;
+            height: 35px;
+            background: transparent;
+            color: white;
+            border-bottom: 3px solid teal;
+            width: 200px;
+        }
+
+        input[type='text']:focus, input[type='password']:focus{
+            border-bottom: 3px solid #00aeef;
+        }
+
+        ::placeholder{
+            color: lightgrey;
+        }
+
+        input[type='submit']{
+            background-color: teal;
+            color: white;
+            border: none;
+            font-size: 18px;
+            margin: 15px;
+            padding: 8px 35px;
+            border-radius: 50px;
+        }
+
+        input[type='submit']:hover{
+            background-color: #00aeef;
+            box-shadow: 0 0 15px white;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Login Form -->
+    <h1 class=""></h1>
+    <div class="form-div animate__animated animate__flip">
+        <img src="img/user.png">
+        <h2>Login Here</h2>
+        <form method="POST" name="google-sheet">
+            <input type="text" placeholder="User Name" name="Username">
+            <br>
+            <input type="password" placeholder="Password" name="Password">
+            <br>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+
+
+<!-- Send form data to Google Sheet -->
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwlJmZsN425c9bHjeth9hQcitF_OJcmT2gMijZXX5ZuUozs7_4LdQCW6xhVKSDRSsEm/exec'
+        const form = document.forms['google-sheet']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+</body>
+</html>
